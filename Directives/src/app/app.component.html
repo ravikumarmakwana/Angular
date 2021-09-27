@@ -1,0 +1,26 @@
+<div class="container">
+  <button type="button" (click)="isOdd = !isOdd" class="btn btn-primary">
+    Toggle
+  </button>
+  <div class="row">
+    <ul *ngIf="isOdd">
+      <li
+        [ngClass]="{ odd: isOdd }"
+        *ngFor="let num of oddNumbers"
+        [ngStyle]="{ 'background-color': getOddColor() }"
+      >
+        {{ num }}
+      </li>
+    </ul>
+    <ul *ngIf="!isOdd">
+      <li
+        [ngClass]="{ even: !isOdd }"
+        *ngFor="let num of evenNumbers"
+        [ngStyle]="{ 'background-color': getEvenColor() }"
+      >
+        {{ num }}
+      </li>
+    </ul>
+    <p basicHighlightDirective>This is my Custom Directive</p>
+  </div>
+</div>
