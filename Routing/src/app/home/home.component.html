@@ -1,0 +1,12 @@
+<h4>Welcome to Server Manager 4.0</h4>
+<p>Manage your Servers and Users.</p>
+<button class="btn btn-success" (click)="onLogin()">Login</button> &nbsp;
+<button class="btn btn-danger" (click)="onLogout()">Logout</button>
+
+<div *ngIf="loggingStatus === 1" class="alert alert-success" role="alert">
+  Login Successfully!
+</div>
+
+<div *ngIf="loggingStatus === 2" class="alert alert-danger" role="alert">
+  Logout Successfully!
+</div>
